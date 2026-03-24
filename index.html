@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VG Realm Store | Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+  <div class="page-shell">
+    <div class="energy-bg">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <div class="grid-lines"></div>
+      <div class="light-streak streak-1"></div>
+      <div class="light-streak streak-2"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+
+    <header class="navbar">
+      <a class="logo" href="index.html">VG Realm</a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="store.html">Store</a>
+        <a href="buy-coins.html">Buy Coins</a>
+        <a href="purchases.html">Purchases</a>
+        <a href="payments.html">Payments</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="nav-meta">
+        <div class="coin-pill">2,850 VG Coins</div>
+        <button class="nav-action" data-nav="settings.html">Profile</button>
+        <button class="nav-action outline" data-nav="index.html">Logout</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="hero-panel">
+        <div class="hero-copy">
+          <p class="eyebrow">Power Up Your Loadout</p>
+          <h1>ENTER VG REALM STORE</h1>
+          <p class="hero-text">
+            Ignite your account with blazing ranks, elite cosmetics, premium keys, and coin drops built for a full-throttle gaming universe.
+          </p>
+          <div class="hero-actions">
+            <button data-nav="store.html">Visit Store</button>
+            <button class="outline" data-nav="buy-coins.html">Buy Coins</button>
+          </div>
+        </div>
+        <div class="hero-side">
+          <div class="offer-banner pulse-card">
+            <span class="offer-label">Flash Deal</span>
+            <h2><span class="vg-inline"><span class="vg-mark">VG</span><span>500</span></span> BONUS PACK</h2>
+            <p>Explosive top-up value with instant coin power for your next purchase.</p>
+            <button data-nav="buy-coins.html">Claim Offer</button>
+          </div>
+          <div class="mini-panels">
+            <article class="mini-card card">
+              <span class="mini-tag">Live</span>
+              <h3>Realm Boost</h3>
+              <p>Weekend bonus activated for all coin packs.</p>
+            </article>
+            <article class="mini-card card">
+              <span class="mini-tag">New Drop</span>
+              <h3>Inferno Crate</h3>
+              <p>Unlock flame-forged cosmetics and prestige effects.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <p class="eyebrow">Command Center</p>
+          <h2>Welcome to VG Realm</h2>
+        </div>
+        <div class="stats-grid">
+          <article class="card stat-card">
+            <span class="stat-label">VG Coins</span>
+            <strong>2,850</strong>
+            <p>Ready for keys, cosmetics, and instant upgrades.</p>
+          </article>
+          <article class="card stat-card">
+            <span class="stat-label">Purchases</span>
+            <strong>18</strong>
+            <p>Your account has been stacked with premium drops.</p>
+          </article>
+          <article class="card stat-card">
+            <span class="stat-label">Ranks Owned</span>
+            <strong>4</strong>
+            <p>Climb harder with elite realm status effects.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <p class="eyebrow">Quick Actions</p>
+          <h2>Jump Straight Into The Heat</h2>
+        </div>
+        <div class="quick-actions-grid">
+          <article class="card action-card">
+            <h3>Store Front</h3>
+            <p>Browse glowing ranks, keys, cosmetics, and blazing crate packs.</p>
+            <button data-nav="store.html">Open Store</button>
+          </article>
+          <article class="card action-card">
+            <h3>Coin Vault</h3>
+            <p>Load your balance with instant-value packs and featured bonuses.</p>
+            <button data-nav="buy-coins.html">Buy Coins</button>
+          </article>
+          <article class="card action-card">
+            <h3>Purchase Log</h3>
+            <p>Track every order, every status update, and every realm upgrade.</p>
+            <button data-nav="purchases.html">View Purchases</button>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="api-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

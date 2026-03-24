@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VG Realm Store | Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="store">
+  <div class="page-shell">
+    <div class="energy-bg">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <div class="grid-lines"></div>
+      <div class="light-streak streak-1"></div>
+      <div class="light-streak streak-2"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+
+    <header class="navbar">
+      <a class="logo" href="index.html">VG Realm</a>
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="store.html" class="active">Store</a>
+        <a href="buy-coins.html">Buy Coins</a>
+        <a href="purchases.html">Purchases</a>
+        <a href="payments.html">Payments</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="nav-meta">
+        <div class="coin-pill">2,850 VG Coins</div>
+        <button class="nav-action" data-nav="settings.html">Profile</button>
+        <button class="nav-action outline" data-nav="index.html">Logout</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page-hero compact">
+        <p class="eyebrow">Realm Arsenal</p>
+        <h1>Store</h1>
+        <p>Every item in the realm is charged, glowing, and ready to boost your identity in-game.</p>
+      </section>
+
+      <section class="section-block">
+        <div class="filter-bar card">
+          <div class="filter-copy">
+            <h2>Browse By Category</h2>
+            <p>Switch between ranks, crates, keys, and cosmetics with instant filtering.</p>
+          </div>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ranks">Ranks</button>
+            <button class="filter-btn" data-filter="crates">Crates</button>
+            <button class="filter-btn" data-filter="keys">Keys</button>
+            <button class="filter-btn" data-filter="cosmetics">Cosmetics</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="products-grid">
+        <article class="card product-card" data-category="ranks">
+          <div class="product-visual rank-1"></div>
+          <span class="product-category">Rank</span>
+          <h3>Overlord Rank</h3>
+          <p>Dominating realm perks, boosted rewards, and VIP access zones.</p>
+          <div class="product-meta">
+            <strong><span class="vg-inline"><span class="vg-mark">VG</span><span>1200</span></span></strong>
+            <div class="product-buttons">
+              <button class="outline" data-add-cart="Overlord Rank">Add to Cart</button>
+              <button data-nav="product.html" data-purchase="Overlord Rank">Buy Now</button>
+            </div>
+          </div>
+        </article>
+        <article class="card product-card" data-category="crates">
+          <div class="product-visual crate-1"></div>
+          <span class="product-category">Crate</span>
+          <h3>Inferno Crate</h3>
+          <p>Crack open a hot drop of premium realm cosmetics and boost effects.</p>
+          <div class="product-meta">
+            <strong><span class="vg-inline"><span class="vg-mark">VG</span><span>450</span></span></strong>
+            <div class="product-buttons">
+              <button class="outline" data-add-cart="Inferno Crate">Add to Cart</button>
+              <button data-nav="product.html" data-purchase="Inferno Crate">Buy Now</button>
+            </div>
+          </div>
+        </article>
+        <article class="card product-card" data-category="keys">
+          <div class="product-visual key-1"></div>
+          <span class="product-category">Key</span>
+          <h3>Nova Key Bundle</h3>
+          <p>Unlock mystery cases faster with a five-key neon ignition pack.</p>
+          <div class="product-meta">
+            <strong><span class="vg-inline"><span class="vg-mark">VG</span><span>250</span></span></strong>
+            <div class="product-buttons">
+              <button class="outline" data-add-cart="Nova Key Bundle">Add to Cart</button>
+              <button data-nav="product.html" data-purchase="Nova Key Bundle">Buy Now</button>
+            </div>
+          </div>
+        </article>
+        <article class="card product-card" data-category="cosmetics">
+          <div class="product-visual cosmetic-1"></div>
+          <span class="product-category">Cosmetic</span>
+          <h3>Blaze Aura Trail</h3>
+          <p>Leave behind a molten light trail every time you enter the arena.</p>
+          <div class="product-meta">
+            <strong><span class="vg-inline"><span class="vg-mark">VG</span><span>320</span></span></strong>
+            <div class="product-buttons">
+              <button class="outline" data-add-cart="Blaze Aura Trail">Add to Cart</button>
+              <button data-nav="product.html" data-purchase="Blaze Aura Trail">Buy Now</button>
+            </div>
+          </div>
+        </article>
+        <article class="card product-card" data-category="ranks">
+          <div class="product-visual rank-2"></div>
+          <span class="product-category">Rank</span>
+          <h3>Mythic Rank</h3>
+          <p>Glowing name color, extra rewards, and elite player recognition.</p>
+          <div class="product-meta">
+            <strong><span class="vg-inline"><span class="vg-mark">VG</span><span>800</span></span></strong>
+            <div class="product-buttons">
+              <button class="outline" data-add-cart="Mythic Rank">Add to Cart</button>
+              <button data-nav="product.html" data-purchase="Mythic Rank">Buy Now</button>
+            </div>
+          </div>
+        </article>
+        <article class="card product-card" data-category="cosmetics">
+          <div class="product-visual cosmetic-2"></div>
+          <span class="product-category">Cosmetic</span>
+          <h3>Dragonfire Wings</h3>
+          <p>A massive animated wing effect forged for standout arena entries.</p>
+          <div class="product-meta">
+            <strong><span class="vg-inline"><span class="vg-mark">VG</span><span>700</span></span></strong>
+            <div class="product-buttons">
+              <button class="outline" data-add-cart="Dragonfire Wings">Add to Cart</button>
+              <button data-nav="product.html" data-purchase="Dragonfire Wings">Buy Now</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="api-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

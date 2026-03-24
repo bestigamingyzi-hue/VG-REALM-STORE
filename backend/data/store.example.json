@@ -1,0 +1,70 @@
+{
+  "users": [],
+  "products": [
+    {
+      "id": "prod_1",
+      "name": "Overlord Rank",
+      "category": "Ranks",
+      "priceCoins": 1200,
+      "active": true,
+      "featured": true,
+      "description": "Top-tier realm access."
+    },
+    {
+      "id": "prod_2",
+      "name": "Inferno Crate",
+      "category": "Crates",
+      "priceCoins": 450,
+      "active": true,
+      "featured": false,
+      "description": "High-value cosmetic crate."
+    },
+    {
+      "id": "prod_3",
+      "name": "Nova Key Bundle",
+      "category": "Keys",
+      "priceCoins": 250,
+      "active": true,
+      "featured": false,
+      "description": "Bundle of premium unlock keys."
+    }
+  ],
+  "coinPackages": [
+    {
+      "id": "coin_1",
+      "name": "Starter Surge",
+      "amount": 100,
+      "gatewayPrice": 1.99,
+      "enabled": true,
+      "highlighted": false
+    },
+    {
+      "id": "coin_2",
+      "name": "Pulse Cache",
+      "amount": 500,
+      "gatewayPrice": 5,
+      "enabled": true,
+      "highlighted": true
+    },
+    {
+      "id": "coin_3",
+      "name": "Inferno Bonus",
+      "amount": 1000,
+      "gatewayPrice": 9.49,
+      "enabled": true,
+      "highlighted": false
+    }
+  ],
+  "paymentSettings": {
+    "methods": {
+      "paypal": true,
+      "card": true,
+      "upi": true
+    },
+    "paypalEmail": "payments@vgrealm.gg",
+    "upiId": "realm@upi",
+    "instructions": "Use supported payment methods to buy VG Coins. Products are purchased only with VG Coins."
+  },
+  "orders": [],
+  "carts": {}
+}

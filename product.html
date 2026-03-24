@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VG Realm Store | Product</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="product">
+  <div class="page-shell">
+    <div class="energy-bg">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <div class="grid-lines"></div>
+      <div class="light-streak streak-1"></div>
+      <div class="light-streak streak-2"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+
+    <header class="navbar">
+      <a class="logo" href="index.html">VG Realm</a>
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="store.html">Store</a>
+        <a href="buy-coins.html">Buy Coins</a>
+        <a href="purchases.html">Purchases</a>
+        <a href="payments.html">Payments</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="nav-meta">
+        <div class="coin-pill">2,850 VG Coins</div>
+        <button class="nav-action" data-nav="settings.html">Profile</button>
+        <button class="nav-action outline" data-nav="index.html">Logout</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="product-layout">
+        <div class="card product-showcase">
+          <div class="product-stage">
+            <div class="showcase-ring"></div>
+            <div class="showcase-core"></div>
+            <div class="showcase-badge">Featured Rank</div>
+          </div>
+        </div>
+        <div class="card product-details-panel">
+          <p class="eyebrow">Legendary Access</p>
+          <h1>Overlord Rank</h1>
+          <div class="price-tag"><span class="vg-inline"><span class="vg-mark">VG</span><span>1200</span></span></div>
+          <p class="product-description">
+            Take over the realm with stacked rank perks, exclusive chat formatting, boosted rewards, premium zone access, and a fiery account presence that stands out instantly.
+          </p>
+          <ul class="feature-list">
+            <li>Exclusive Overlord badge and flaming name effect</li>
+            <li>Priority queue and boosted daily reward multipliers</li>
+            <li>Access to VIP-only arenas, crates, and cosmetic unlocks</li>
+          </ul>
+          <div class="product-actions">
+            <button class="outline" data-add-cart="Overlord Rank">Add to Cart</button>
+            <button data-purchase="Overlord Rank">Buy Now</button>
+            <button class="outline" data-nav="store.html">Back To Store</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="api-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

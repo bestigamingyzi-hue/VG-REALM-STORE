@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VG Realm Store | Purchases</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="purchases">
+  <div class="page-shell">
+    <div class="energy-bg">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <div class="grid-lines"></div>
+      <div class="light-streak streak-1"></div>
+      <div class="light-streak streak-2"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+
+    <header class="navbar">
+      <a class="logo" href="index.html">VG Realm</a>
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="store.html">Store</a>
+        <a href="buy-coins.html">Buy Coins</a>
+        <a href="purchases.html" class="active">Purchases</a>
+        <a href="payments.html">Payments</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="nav-meta">
+        <div class="coin-pill">2,850 VG Coins</div>
+        <button class="nav-action" data-nav="settings.html">Profile</button>
+        <button class="nav-action outline" data-nav="index.html">Logout</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page-hero compact">
+        <p class="eyebrow">History Log</p>
+        <h1>Purchases</h1>
+        <p>Every realm transaction in one glowing command view.</p>
+      </section>
+
+      <section class="card table-card">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Coins</th>
+              <th>Payment</th>
+              <th>Order</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Overlord Rank</td>
+              <td>1200</td>
+              <td><span class="status complete">Paid</span></td>
+              <td><span class="status complete">Delivered</span></td>
+              <td>24 Mar 2026</td>
+            </tr>
+            <tr>
+              <td>Inferno Crate</td>
+              <td>450</td>
+              <td><span class="status pending">Proof Submitted</span></td>
+              <td><span class="status pending">Pending</span></td>
+              <td>23 Mar 2026</td>
+            </tr>
+            <tr>
+              <td>Blaze Aura Trail</td>
+              <td>320</td>
+              <td><span class="status complete">Paid</span></td>
+              <td><span class="status complete">Delivered</span></td>
+              <td>21 Mar 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+  <script src="api-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

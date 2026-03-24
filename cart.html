@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VG Realm Store | Cart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="cart">
+  <div class="page-shell">
+    <div class="energy-bg">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <div class="grid-lines"></div>
+      <div class="light-streak streak-1"></div>
+      <div class="light-streak streak-2"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+
+    <header class="navbar">
+      <a class="logo" href="index.html">VG Realm</a>
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="store.html">Store</a>
+        <a href="buy-coins.html">Buy Coins</a>
+        <a href="cart.html" class="active">Cart</a>
+        <a href="purchases.html">Purchases</a>
+        <a href="payments.html">Payments</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="nav-meta">
+        <div class="coin-pill">2,850 VG Coins</div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page-hero compact">
+        <p class="eyebrow">Shopping Flow</p>
+        <h1>Cart</h1>
+        <p>Review your selected realm products, update quantities, and move into checkout.</p>
+      </section>
+
+      <section class="cart-layout">
+        <div class="cart-items" id="cart-items"></div>
+        <aside class="card cart-summary">
+          <p class="eyebrow">Cart Total</p>
+          <h2 id="cart-total">0 VG Coins</h2>
+          <p id="cart-count">0 items in cart</p>
+          <div class="cart-actions">
+            <button class="outline" data-nav="store.html">Continue Shopping</button>
+            <button id="checkout-btn">Checkout</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+  <script src="api-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

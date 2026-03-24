@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VG Realm Store | Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="checkout">
+  <div class="page-shell">
+    <div class="energy-bg">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <div class="grid-lines"></div>
+      <div class="light-streak streak-1"></div>
+      <div class="light-streak streak-2"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+
+    <header class="navbar">
+      <a class="logo" href="index.html">VG Realm</a>
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="store.html">Store</a>
+        <a href="buy-coins.html">Buy Coins</a>
+        <a href="cart.html">Cart</a>
+        <a href="checkout.html" class="active">Checkout</a>
+        <a href="purchases.html">Purchases</a>
+        <a href="payments.html">Payments</a>
+      </nav>
+      <div class="nav-meta">
+        <div class="coin-pill">2,850 VG Coins</div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page-hero compact">
+        <p class="eyebrow">Payment Flow</p>
+        <h1>Checkout</h1>
+        <p>Review your cart and complete the order using your VG Coin balance.</p>
+      </section>
+
+      <section class="checkout-layout">
+        <div class="card checkout-step">
+          <p class="eyebrow">Step 1</p>
+          <h2>Cart Summary</h2>
+          <div id="checkout-summary"></div>
+        </div>
+        <div class="card checkout-step">
+          <p class="eyebrow">Step 2</p>
+          <h2>Coin Checkout</h2>
+          <div class="payment-options" id="payment-options"></div>
+          <div class="payment-instructions" id="payment-instructions"></div>
+          <div class="checkout-footer">
+            <div class="price-tag" id="checkout-total">0 VG Coins</div>
+            <button id="place-order-btn">Place Order</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="api-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

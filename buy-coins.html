@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VG Realm Store | Buy Coins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="coins">
+  <div class="page-shell">
+    <div class="energy-bg">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <div class="grid-lines"></div>
+      <div class="light-streak streak-1"></div>
+      <div class="light-streak streak-2"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+
+    <header class="navbar">
+      <a class="logo" href="index.html">VG Realm</a>
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="store.html">Store</a>
+        <a href="buy-coins.html" class="active">Buy Coins</a>
+        <a href="purchases.html">Purchases</a>
+        <a href="payments.html">Payments</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="nav-meta">
+        <div class="coin-pill"><span class="vg-inline"><span class="vg-mark">VG</span><span>500</span></span></div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page-hero compact">
+        <p class="eyebrow">Coin Vault</p>
+        <h1>Buy Coins</h1>
+        <p>Use simulated payment methods here to add coins to your wallet. Store products can only be purchased with VG Coins.</p>
+      </section>
+
+      <section class="offer-banner wide pulse-card">
+        <span class="offer-label">Featured Top-Up</span>
+        <h2><span class="vg-inline"><span class="vg-mark">VG</span><span>500</span></span> BONUS PACK</h2>
+        <p>Recharge your balance and unlock product purchases across the realm store.</p>
+      </section>
+
+      <section class="coin-grid">
+        <article class="card coin-card">
+          <span class="coin-amount"><span class="vg-inline"><span class="vg-mark">VG</span><span>100</span></span></span>
+          <h3>Starter Surge</h3>
+          <p>Small balance boost for quick store activity.</p>
+          <strong>Gateway Top-Up</strong>
+          <button data-coin-pack="Starter Surge">Buy Pack</button>
+        </article>
+        <article class="card coin-card featured">
+          <span class="coin-amount"><span class="vg-inline"><span class="vg-mark">VG</span><span>500</span></span></span>
+          <h3>Pulse Cache</h3>
+          <p>Balanced top-up for regular realm spending.</p>
+          <strong>Gateway Top-Up</strong>
+          <button data-coin-pack="Pulse Cache">Buy Pack</button>
+        </article>
+        <article class="card coin-card">
+          <span class="coin-amount"><span class="vg-inline"><span class="vg-mark">VG</span><span>1000</span></span></span>
+          <h3>Inferno Bonus</h3>
+          <p>Strong recharge for ranks, cosmetics, and multi-item carts.</p>
+          <strong>Gateway Top-Up</strong>
+          <button data-coin-pack="Inferno Bonus">Buy Pack</button>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="api-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

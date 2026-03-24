@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VG Realm Store | Payments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="payments">
+  <div class="page-shell">
+    <div class="energy-bg">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <div class="grid-lines"></div>
+      <div class="light-streak streak-1"></div>
+      <div class="light-streak streak-2"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+
+    <header class="navbar">
+      <a class="logo" href="index.html">VG Realm</a>
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="store.html">Store</a>
+        <a href="buy-coins.html">Buy Coins</a>
+        <a href="purchases.html">Purchases</a>
+        <a href="payments.html" class="active">Payments</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="nav-meta">
+        <div class="coin-pill">2,850 VG Coins</div>
+        <button class="nav-action" data-nav="settings.html">Profile</button>
+        <button class="nav-action outline" data-nav="index.html">Logout</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page-hero compact">
+        <p class="eyebrow">Payment Flow</p>
+        <h1>Payments</h1>
+        <p>Monitor your pending checkouts and completed realm charges.</p>
+      </section>
+
+      <section class="payments-grid">
+        <article class="card payment-panel">
+          <h2>Pending</h2>
+          <div class="payment-item">
+            <strong>Inferno Crate</strong>
+            <span>PayPal Gateway</span>
+            <p>Awaiting coin top-up confirmation.</p>
+          </div>
+          <div class="payment-item">
+            <strong>Pulse Cache</strong>
+            <span>UPI Gateway</span>
+            <p>Processing coin top-up request.</p>
+          </div>
+        </article>
+        <article class="card payment-panel">
+          <h2>Completed</h2>
+          <div class="payment-item">
+            <strong>Overlord Rank</strong>
+            <span>VG Coins</span>
+            <p>Product purchase completed through wallet balance on 24 Mar 2026.</p>
+          </div>
+          <div class="payment-item">
+            <strong>Blaze Aura Trail</strong>
+            <span>VG Coins</span>
+            <p>Wallet-funded purchase delivered to account on 21 Mar 2026.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="api-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

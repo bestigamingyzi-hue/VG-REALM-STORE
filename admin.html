@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VG Realm Admin Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+  <div class="auth-shell" id="auth-shell">
+    <div class="admin-bg">
+      <div class="bg-grid"></div>
+      <div class="glow glow-a"></div>
+      <div class="glow glow-b"></div>
+      <div class="particles" id="auth-particles"></div>
+    </div>
+
+    <section class="auth-panel card">
+      <div class="auth-copy">
+        <p class="section-tag">Secure Access Layer</p>
+        <h1>VG Realm Admin Login</h1>
+        <p>Take command of VG Realm Store with a high-control admin cockpit built for fast decisions, sharp oversight, and full system authority.</p>
+        <div class="auth-points">
+          <span class="glow-chip">Encrypted Feel</span>
+          <span class="glow-chip">Admin Session</span>
+          <span class="glow-chip">Control Access</span>
+        </div>
+      </div>
+
+      <form id="login-form" class="admin-form auth-form">
+        <label><span>Admin Email</span><input type="email" id="login-email" placeholder="admin@vgrealm.gg" required></label>
+        <label><span>Password</span><input type="password" id="login-password" placeholder="Enter admin password" required></label>
+        <label class="toggle"><input type="checkbox" id="login-remember"><span>Remember this device</span></label>
+        <div class="auth-actions">
+          <button type="submit">Enter Admin Panel</button>
+        </div>
+        <p class="auth-message" id="auth-message">Authorized admins only. Access is restricted to your private credentials.</p>
+      </form>
+    </section>
+  </div>
+
+  <div class="admin-shell hidden-shell" id="admin-shell">
+    <div class="admin-bg">
+      <div class="bg-grid"></div>
+      <div class="glow glow-a"></div>
+      <div class="glow glow-b"></div>
+      <div class="particles" id="admin-particles"></div>
+    </div>
+
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-mark"></span>
+        <div>
+          <p class="brand-overline">Control Core</p>
+          <h1>VG Realm</h1>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="sidebar-link active" data-section="dashboard">Dashboard</button>
+        <button class="sidebar-link" data-section="products">Products</button>
+        <button class="sidebar-link" data-section="orders">Orders</button>
+        <button class="sidebar-link" data-section="coins">Coins</button>
+        <button class="sidebar-link" data-section="payments">Payment Settings</button>
+        <button class="sidebar-link" data-section="users">Users</button>
+        <button class="sidebar-link" data-section="settings">Settings</button>
+      </nav>
+
+      <div class="sidebar-footer card">
+        <p class="mini-label">System Pulse</p>
+        <strong>70% Site Control Active</strong>
+        <span>Products, orders, users, coins, and settings are fully manageable from this panel.</span>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="topbar">
+        <div>
+          <p class="section-tag">Neon Operations Layer</p>
+          <h2 id="section-title">Dashboard</h2>
+        </div>
+        <div class="topbar-actions">
+          <div class="admin-pill">Admin: RealmMaster</div>
+          <button class="ghost-btn" id="notifications-btn">Notifications</button>
+          <button id="logout-btn">Logout</button>
+        </div>
+      </header>
+
+      <section class="panel-section active" data-panel="dashboard">
+        <div class="hero-console card">
+          <div>
+            <p class="section-tag">Operations Status</p>
+            <h3>Blue Neon Command Deck</h3>
+            <p>Control the VG Realm storefront with live stats, direct editing, and fast action systems built for a premium hacker-style admin experience.</p>
+          </div>
+          <div class="hero-badges">
+            <span class="glow-chip">Live Control</span>
+            <span class="glow-chip">Order Routing</span>
+            <span class="glow-chip">User Oversight</span>
+          </div>
+        </div>
+
+        <div class="stats-grid" id="stats-grid"></div>
+
+        <div class="dashboard-lower">
+          <article class="card spotlight-card">
+            <p class="mini-label">Hot Offer Control</p>
+            <h3 id="offer-preview">500 Coins for $5</h3>
+            <span>Offer text is synced from the settings module and updates instantly in the admin state.</span>
+          </article>
+          <article class="card activity-card">
+            <p class="mini-label">Recent Admin Activity</p>
+            <ul class="activity-list" id="activity-list"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel-section" data-panel="products">
+        <div class="section-headline">
+          <div>
+            <p class="section-tag">Catalog Control</p>
+            <h3>Products Management</h3>
+          </div>
+          <button id="reset-products-btn" class="ghost-btn">Reset Demo Products</button>
+        </div>
+
+        <div class="management-grid">
+          <article class="card editor-card">
+            <h4 id="product-form-title">Add Product</h4>
+            <form id="product-form" class="admin-form">
+              <input type="hidden" id="product-id">
+              <label><span>Name</span><input type="text" id="product-name" required></label>
+              <label><span>Price</span><input type="number" id="product-price" step="0.01" required></label>
+              <label><span>Category</span>
+                <select id="product-category" required>
+                  <option value="Ranks">Ranks</option>
+                  <option value="Crates">Crates</option>
+                  <option value="Keys">Keys</option>
+                  <option value="Cosmetics">Cosmetics</option>
+                </select>
+              </label>
+              <label><span>Description</span><textarea id="product-description" rows="4" required></textarea></label>
+              <label><span>Image URL / Label</span><input type="text" id="product-image" placeholder="inferno-crate.png"></label>
+              <div class="switch-row">
+                <label class="toggle"><input type="checkbox" id="product-active" checked><span>Active</span></label>
+                <label class="toggle"><input type="checkbox" id="product-featured"><span>Featured</span></label>
+              </div>
+              <div class="form-actions">
+                <button type="submit">Save Product</button>
+                <button type="button" class="ghost-btn" id="product-clear-btn">Clear</button>
+              </div>
+            </form>
+          </article>
+
+          <article class="card table-card">
+            <div class="table-toolbar">
+              <h4>Product Inventory</h4>
+              <div class="toolbar-note">Add, edit, feature, or disable live catalog items.</div>
+            </div>
+            <div class="table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price (VG)</th>
+                    <th>Status</th>
+                    <th>Featured</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="products-body"></tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel-section" data-panel="orders">
+        <div class="section-headline">
+          <div>
+            <p class="section-tag">Fulfillment Matrix</p>
+            <h3>Orders Control</h3>
+          </div>
+        </div>
+
+        <div class="card filter-card">
+          <div class="filter-grid">
+            <label><span>Search</span><input type="text" id="order-search" placeholder="Search user, product, or ID"></label>
+            <label><span>Status</span>
+              <select id="order-filter">
+                <option value="all">All</option>
+                <option value="Pending">Pending</option>
+                <option value="Delivered">Delivered</option>
+                <option value="Failed">Failed</option>
+              </select>
+            </label>
+            <label><span>Sort</span>
+              <select id="order-sort">
+                <option value="date-desc">Newest First</option>
+                <option value="date-asc">Oldest First</option>
+                <option value="coins-desc">Coins High-Low</option>
+                <option value="coins-asc">Coins Low-High</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="card table-card">
+          <div class="table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>User</th>
+                  <th>Product</th>
+                  <th>Coins</th>
+                  <th>Payment Method</th>
+                  <th>Payment Status</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Notes</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="orders-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel-section" data-panel="coins">
+        <div class="section-headline">
+          <div>
+            <p class="section-tag">Offer Engine</p>
+            <h3>Coins Management</h3>
+          </div>
+        </div>
+
+        <div class="management-grid">
+          <article class="card editor-card">
+            <h4 id="coin-form-title">Add Package</h4>
+            <form id="coin-form" class="admin-form">
+              <input type="hidden" id="coin-id">
+              <label><span>Package Name</span><input type="text" id="coin-name" required></label>
+              <label><span>Coin Amount</span><input type="number" id="coin-amount" required></label>
+              <label><span>Price</span><input type="number" id="coin-price" step="0.01" required></label>
+              <div class="switch-row">
+                <label class="toggle"><input type="checkbox" id="coin-enabled" checked><span>Enabled</span></label>
+                <label class="toggle"><input type="checkbox" id="coin-highlight"><span>Highlight Offer</span></label>
+              </div>
+              <div class="form-actions">
+                <button type="submit">Save Package</button>
+                <button type="button" class="ghost-btn" id="coin-clear-btn">Clear</button>
+              </div>
+            </form>
+          </article>
+
+          <article class="card table-card">
+            <div class="table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Package</th>
+                    <th>Coins</th>
+                    <th>Gateway Price</th>
+                    <th>Enabled</th>
+                    <th>Highlighted</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="coins-body"></tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel-section" data-panel="payments">
+        <div class="section-headline">
+          <div>
+            <p class="section-tag">Gateway Control</p>
+            <h3>Payment Settings</h3>
+          </div>
+        </div>
+
+        <div class="card editor-card wide-card">
+          <form id="payment-settings-form" class="admin-form two-column">
+            <label class="toggle"><input type="checkbox" id="pay-vgcoins"><span>Enable VG Coins</span></label>
+            <label class="toggle"><input type="checkbox" id="pay-paypal"><span>Enable PayPal</span></label>
+            <label class="toggle"><input type="checkbox" id="pay-card"><span>Enable Card</span></label>
+            <label class="toggle"><input type="checkbox" id="pay-upi"><span>Enable UPI</span></label>
+            <label><span>UPI ID</span><input type="text" id="payment-upi-id"></label>
+            <label><span>PayPal Email</span><input type="email" id="payment-paypal-email"></label>
+            <label class="full-span"><span>Payment Instructions</span><textarea id="payment-instructions-text" rows="4"></textarea></label>
+            <div class="form-actions full-span">
+              <button type="submit">Save Payment Settings</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="panel-section" data-panel="users">
+        <div class="section-headline">
+          <div>
+            <p class="section-tag">User Oversight</p>
+            <h3>Users Control</h3>
+          </div>
+        </div>
+
+        <div class="card table-card">
+          <div class="table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Email</th>
+                  <th>Coins</th>
+                  <th>Status</th>
+                  <th>History</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="users-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel-section" data-panel="settings">
+        <div class="section-headline">
+          <div>
+            <p class="section-tag">Core Configuration</p>
+            <h3>Settings</h3>
+          </div>
+        </div>
+
+        <div class="card editor-card wide-card">
+          <form id="settings-form" class="admin-form two-column">
+            <label><span>Site Name</span><input type="text" id="settings-site-name" required></label>
+            <label><span>Offer Text</span><input type="text" id="settings-offer-text" required></label>
+            <label class="full-span"><span>Admin Emails</span><textarea id="settings-admin-emails" rows="4" required></textarea></label>
+            <div class="form-actions full-span">
+              <button type="submit">Save Settings</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="api-config.js"></script>
+  <script src="admin-script.js"></script>
+</body>
+</html>
