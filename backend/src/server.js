@@ -360,6 +360,18 @@ app.listen(port, () => {
   console.log(`VG Realm backend listening on http://localhost:${port}`);
 });
 
-pool.query("SELECT NOW()")
-  .then(() => console.log("✅ DB Connected"))
-  .catch(err => console.error("❌ DB Error:", err));
+app.get("/api/test-db", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT NOW()");
+    res.json({
+      success: true,
+      time: result.rows[0],
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      success: false,
+      error: err.message,
+    });
+  }
+});
