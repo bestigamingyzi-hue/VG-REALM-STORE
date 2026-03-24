@@ -1,23 +1,32 @@
 // ------------------- GUEST CHECK START -------------------
 const user = JSON.parse(localStorage.getItem("user"));
 
-// Hide or reset user stats for guests
-if (!user) {
-  // Hide top nav coins/profile/logout
-  document.getElementById("navUserInfo").style.display = "none";
+// Safe guest handling
+const navUserInfo = document.getElementById("navUserInfo");
+const summary = document.getElementById("summary");
 
-  // Reset bottom stats or hide summary
-  document.getElementById("ranksOwned").innerText = "0";
-  document.getElementById("purchases").innerText = "0";
-  document.getElementById("summary").style.display = "none"; // optional
+if (!user) {
+  // Hide top nav coins/profile if element exists
+  if (navUserInfo) navUserInfo.style.display = "none";
+
+  // Hide or reset bottom stats safely
+  if (summary) {
+    summary.style.display = "none";
+    const ranksOwned = document.getElementById("ranksOwned");
+    const purchases = document.getElementById("purchases");
+    if (ranksOwned) ranksOwned.innerText = "0";
+    if (purchases) purchases.innerText = "0";
+  }
 } else {
   // Show top nav for logged-in users
-  document.getElementById("navUserInfo").style.display = "flex";
+  if (navUserInfo) navUserInfo.style.display = "flex";
 
-  // Populate bottom summary stats
-  document.getElementById("ranksOwned").innerText = user.ranks?.length || 0;
-  document.getElementById("purchases").innerText = user.purchases?.length || 0;
-  document.getElementById("summary").style.display = "block";
+  // Populate bottom summary stats safely
+  if (summary) summary.style.display = "block";
+  const ranksOwned = document.getElementById("ranksOwned");
+  const purchases = document.getElementById("purchases");
+  if (ranksOwned) ranksOwned.innerText = user.ranks?.length || 0;
+  if (purchases) purchases.innerText = user.purchases?.length || 0;
 }
 // ------------------- GUEST CHECK END -------------------
 document.querySelectorAll("[data-purchase]").forEach(btn => {
