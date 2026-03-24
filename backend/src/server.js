@@ -1,3 +1,4 @@
+const pool = require("./db");
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
