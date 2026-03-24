@@ -1,3 +1,25 @@
+// ------------------- GUEST CHECK START -------------------
+const user = JSON.parse(localStorage.getItem("user"));
+
+// Hide or reset user stats for guests
+if (!user) {
+  // Hide top nav coins/profile/logout
+  document.getElementById("navUserInfo").style.display = "none";
+
+  // Reset bottom stats or hide summary
+  document.getElementById("ranksOwned").innerText = "0";
+  document.getElementById("purchases").innerText = "0";
+  document.getElementById("summary").style.display = "none"; // optional
+} else {
+  // Show top nav for logged-in users
+  document.getElementById("navUserInfo").style.display = "flex";
+
+  // Populate bottom summary stats
+  document.getElementById("ranksOwned").innerText = user.ranks?.length || 0;
+  document.getElementById("purchases").innerText = user.purchases?.length || 0;
+  document.getElementById("summary").style.display = "block";
+}
+// ------------------- GUEST CHECK END -------------------
 const API_BASE = window.VG_API_BASE || "http://localhost:4000/api";
 const authTokenKey = "vgRealmAuthToken";
 const userKey = "vgRealmAuthUser";
