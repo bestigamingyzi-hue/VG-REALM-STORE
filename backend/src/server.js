@@ -359,3 +359,7 @@ app.patch("/api/admin/users/:userId/ban", authRequired, adminRequired, (req, res
 app.listen(port, () => {
   console.log(`VG Realm backend listening on http://localhost:${port}`);
 });
+
+pool.query("SELECT NOW()")
+  .then(() => console.log("✅ DB Connected"))
+  .catch(err => console.error("❌ DB Error:", err));
