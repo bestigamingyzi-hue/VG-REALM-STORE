@@ -30,6 +30,16 @@ document.querySelectorAll("[data-purchase]").forEach(btn => {
   });
 });
 
+document.querySelectorAll("[data-add-cart]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (!user) {
+      showAuthModal(); // open login/register modal
+      return;
+    }
+    // logged-in user logic here
+  });
+});
+
 const API_BASE = window.VG_API_BASE || "http://localhost:4000/api";
 const authTokenKey = "vgRealmAuthToken";
 const userKey = "vgRealmAuthUser";
