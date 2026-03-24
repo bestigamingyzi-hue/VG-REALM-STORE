@@ -356,10 +356,6 @@ app.patch("/api/admin/users/:userId/ban", authRequired, adminRequired, (req, res
   res.json({ user: publicUser(user) });
 });
 
-app.listen(port, () => {
-  console.log(`VG Realm backend listening on http://localhost:${port}`);
-});
-
 app.get("/api/test-db", async (req, res) => {
   try {
     const result = await pool.query("SELECT NOW()");
@@ -374,3 +370,8 @@ app.get("/api/test-db", async (req, res) => {
     });
   }
 });
+
+app.listen(port, () => {
+  console.log(`VG Realm backend listening on http://localhost:${port}`);
+});
+
